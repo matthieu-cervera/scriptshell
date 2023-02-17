@@ -1,5 +1,6 @@
 #!/bin/bash
 #SBATCH --time=00:10:00
+#SBATCH --memory=5G
 #SBATCH --account=def-pesantg	
 #SBATCH --output=test-%J.out
 #SBATCH --mail-user=matthieu.cervera@hotmail.com
