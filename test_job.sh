@@ -2,6 +2,14 @@
 #SBATCH --time=00:02:00
 #SBATCH --account=def-pesantg	
 #SBATCH --output=test-%J.out
+#SBATCH --mail-user=matthieu.cervera@hotmail.com
+#SBATCH --mail-type=ALL
 
-echo "Hello World"
+python3 -m venv pyth-env
+source pyth-env/bin/activate
+python3 -m pip install -r requirements.txt
+echo 'Python environment in place'
+deactivate
+
+
 exit
