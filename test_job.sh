@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=00:02:00
+#SBATCH --time=00:10:00
 #SBATCH --account=def-pesantg	
 #SBATCH --output=test-%J.out
 #SBATCH --mail-user=matthieu.cervera@hotmail.com
