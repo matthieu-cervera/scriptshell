@@ -20,6 +20,7 @@ cd $SLURM_TMPDIR/
 unzip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/CMT_test.zip -d $SLURM_TMPDIR/
 unzip /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
 
+ls
 python $SLURM_TMPDIR/run.py --idx 2 --gpu_index 0 --ngpu 1 --optim_name adam --restore_epoch -1 --seed 42
 
 zip -r /home/matt3c/scratch/training_P1_testing results/idx002/
