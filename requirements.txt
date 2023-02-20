@@ -3,7 +3,7 @@ matplotlib
 music21
 numpy
 pretty_midi
-PyYAML
+PyYAML==5.4.1
 scikit_learn
 scipy
 tensorboardX
