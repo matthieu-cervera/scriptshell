@@ -9,7 +9,7 @@ source pyth-env/bin/activate
 python3 -m pip freeze > installed.txt
 echo 'Python environment still here'
 deactivate
-zip -r CMT_test.zip projects/def-pesantg/matt3c/virasone_project/CMT_CPBP/
+zip -r CMT_test.zip virasone_project/CMT_CPBP/
 
 
 exit
