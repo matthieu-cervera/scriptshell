@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:v100l:1 # Request GPU "generic resources"
 #SBATCH --cpus-per-task=8  # Cores proportional to GPUs: 6 on Cedar, 16 on Graham.
 #SBATCH --mem=48000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham.
-#SBATCH --time=0-05:00
+#SBATCH --time=0-10:00
 
 cp requirements.txt $SLURM_TMPDIR/
 
