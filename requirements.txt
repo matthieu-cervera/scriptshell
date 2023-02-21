@@ -3,6 +3,7 @@ matplotlib
 music21
 numpy
 pretty_midi
+psutil
 PyYAML==5.4.1
 scikit_learn
 scipy
