@@ -1,5 +1,6 @@
 #!/bin/bash
 #SBATCH --account=def-pesantg
+#SBATCH --mem=5G
 #SBATCH --mail-user=matthieu.cervera@hotmail.com
 #SBATCH --mail-type=ALL
 #SBATCH --time=00:10:00
