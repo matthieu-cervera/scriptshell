@@ -14,10 +14,12 @@ virtualenv --no-download $SLURM_TMPDIR/env
 source $SLURM_TMPDIR/env/bin/activate
 pip install --upgrade pip --no-index
 pip install -r requirements.txt
+pip freeze > installed.txt
+
+cat installed.txt
 
 cd $SLURM_TMPDIR/
-unzip CMT_test.zip -d $SLURM_TMPDIR/
-unzip /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
+
 
 ls 
 exit
