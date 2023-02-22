@@ -17,7 +17,7 @@ pip install --upgrade pip --no-index
 pip install -r requirements.txt
 
 cd $SLURM_TMPDIR/
-unzip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/CMTusagelog.zip -d $SLURM_TMPDIR/
+unzip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/CMT-usagelog-csv.zip -d $SLURM_TMPDIR/
 unzip /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
 
 ls
