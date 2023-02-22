@@ -1,3 +1,5 @@
+csv
+gputil
 librosa
 matplotlib
 music21
