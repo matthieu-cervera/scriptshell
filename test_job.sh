@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=00:10:00
+#SBATCH --time=00:01:00
 #SBATCH --mem=5G
 #SBATCH --account=def-pesantg	
 #SBATCH --output=test-%J.out
@@ -21,8 +21,7 @@ cd ..
 pwd
 cd .. 
 pwd
-cd .. 
-pwd
+ls
 cd $SLURM_TMPDIR/
 
 cp installed.txt /scriptshell/
