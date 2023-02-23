@@ -24,6 +24,6 @@ pwd
 ls
 cd $SLURM_TMPDIR/
 
-cp installed.txt /scriptshell/
+cp installed.txt /projects/def-pesantg/matt3c/scriptshell/
 
 exit
