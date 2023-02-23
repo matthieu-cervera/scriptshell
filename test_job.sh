@@ -17,8 +17,10 @@ source $SLURM_TMPDIR/env/bin/activate
 #pip install --upgrade pip --no-index
 #pip install -r requirements.txt
 pip freeze > installed.txt
+cd .. 
+pwd
+cd $SLURM_TMPDIR/
 
-
-cp installed.txt $home/matt3c/projects/def-pesantg/matt3c/scriptshell/
+cp installed.txt scriptshell/
 
 exit
