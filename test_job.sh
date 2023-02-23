@@ -19,6 +19,6 @@ source $SLURM_TMPDIR/env/bin/activate
 pip freeze > installed.txt
 
 
-cp installed.txt home/matt3c/projects/def-pesantg/matt3c/scriptshell/
+cp installed.txt $home/matt3c/projects/def-pesantg/matt3c/scriptshell/
 
 exit
