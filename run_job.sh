@@ -7,7 +7,7 @@
 #SBATCH --mem=48000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham.
 #SBATCH --time=0-10:00
 
-cp requirements.txt $SLURM_TMPDIR/
+cp requirements.txt usage.csv $SLURM_TMPDIR/
 
 module load python/3.8
 module load scipy-stack
@@ -20,9 +20,13 @@ cd $SLURM_TMPDIR/
 unzip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/CMT-usagelog-csv.zip -d $SLURM_TMPDIR/
 unzip /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
 
-ls
 python $SLURM_TMPDIR/run.py --idx 2 --gpu_index 0 --ngpu 1 --optim_name adam --restore_epoch -1 --seed 42
 
 zip -r results.zip results/idx002/
+
+cat usage.csv
+
+cp results.zip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
+cp usage.csv /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
 
 exit
