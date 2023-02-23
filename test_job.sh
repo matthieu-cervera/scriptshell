@@ -18,6 +18,6 @@ pip install -r requirements.txt
 pip freeze > installed.txt
 
 
-cp installed.txt projects/def-pesantg/matt3c/scriptshell
+cp installed.txt home/matt3c/projects/def-pesantg/matt3c/scriptshell
 
 exit
