@@ -19,6 +19,10 @@ source $SLURM_TMPDIR/env/bin/activate
 pip freeze > installed.txt
 cd .. 
 pwd
+cd .. 
+pwd
+cd .. 
+pwd
 cd $SLURM_TMPDIR/
 
 cp installed.txt scriptshell/
