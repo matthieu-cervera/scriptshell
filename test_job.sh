@@ -25,6 +25,6 @@ cd ..
 pwd
 cd $SLURM_TMPDIR/
 
-cp installed.txt scriptshell/
+cp installed.txt /scriptshell/
 
 exit
