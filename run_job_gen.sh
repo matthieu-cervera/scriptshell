@@ -31,9 +31,9 @@ python $SLURM_TMPDIR/run.py --idx 2 --gpu_index 0 --ngpu 1 --optim_name adam --r
 
 zip -r results.zip results/idx002/
 
-zip -r /home/manibod/scratch/CMTCP_R7_P3_6token3_refactor_results results/idx001/sampling_results/
+#zip -r /home/manibod/scratch/CMTCP_R7_P3_6token3_refactor_results results/idx002/sampling_results/
 
 cp results.zip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
-cp usage_gen.csv /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
+#cp usage_gen.csv /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
 
 exit
