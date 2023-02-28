@@ -4,7 +4,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --cpus-per-task=4  # Cores proportional to GPUs: 6 on Cedar, 16 on Graham.
 #SBATCH --mem=24000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham.
-#SBATCH --time=0-10:00
+#SBATCH --time=1-10:00
 
 cp requirements.txt usage.csv $SLURM_TMPDIR/
 
