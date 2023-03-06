@@ -7,7 +7,7 @@
 #SBATCH --mem=48000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham.
 #SBATCH --time=0-02:00
 
-cp requirements.txt usage-thread.csv  run_w_threads.py $SLURM_TMPDIR/
+cp requirements.txt usage-thread.csv $SLURM_TMPDIR/
 
 module load python/3.8
 module load scipy-stack
@@ -23,7 +23,7 @@ unset JAVA_TOOL_OPTIONS
 
 cd $SLURM_TMPDIR/
 
-unzip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/CMT-usagelog-csv.zip -d $SLURM_TMPDIR/
+unzip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/CMT-thread.zip -d $SLURM_TMPDIR/
 unzip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/results.zip -d $SLURM_TMPDIR/
 unzip /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
 
