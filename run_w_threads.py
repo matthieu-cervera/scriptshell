@@ -111,6 +111,7 @@ def train_or_sample():
     job_done = True
 
 def check_usage():
+    print('Check usages')
     first_row = [str(psutil.virtual_memory()[0]), str(psutil.cpu_percent(interval=1)), str(GPUs[0].memoryTotal)]
     with open('usage-thread.csv', 'a') as fd:
         writer = csv.writer(fd)
@@ -123,10 +124,12 @@ def check_usage():
             writer.writerow(usage_row)
         time.sleep(120)
 
+print('Creating threads')
 # Create threads for training or sampling and for usage check
 thread_main = Thread(target = train_or_sample)
 thread_usage = Thread(target = check_usage)
 
+print('Starting threads')
 # Start training or sampling in a thread and usage check in another
 thread_main.start()
 thread_usage.start()
