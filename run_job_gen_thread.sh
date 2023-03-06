@@ -25,6 +25,8 @@ cd $SLURM_TMPDIR/
 
 unzip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/CMT-usagelog-csv.zip -d $SLURM_TMPDIR/
 unzip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/results.zip -d $SLURM_TMPDIR/
+unzip /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
+
 
 
 python $SLURM_TMPDIR/run_w_threads.py --idx 2 --gpu_index 0 --ngpu 1 --optim_name adam --restore_epoch -100 --seed 42 --load_rhythm --sample
