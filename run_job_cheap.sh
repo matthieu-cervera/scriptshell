@@ -3,7 +3,6 @@
 #SBATCH --mail-user=matthieu.cervera@hotmail.com
 #SBATCH --mail-type=ALL
 #SBATCH --gres=gpu:v100l:1 # Request GPU "generic resources"
-#SBATCH --cpus-per-task=2  # Cores proportional to GPUs: 6 on Cedar, 16 on Graham.
 #SBATCH --mem=12000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham.
 #SBATCH --time=1-10:00
 
@@ -22,11 +21,10 @@ unzip /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
 
 python $SLURM_TMPDIR/run.py --idx 2 --gpu_index 0 --ngpu 1 --optim_name adam --restore_epoch -1 --seed 42
 
-zip -r results.zip results/idx002/
+zip -r resultscheap.zip results/idx002/
 
-cat usage.csv
 
-cp results.zip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
+cp resultscheap.zip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
 cp usage.csv /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
 
 exit
