@@ -3,6 +3,7 @@
 #SBATCH --mail-user=matthieu.cervera@hotmail.com
 #SBATCH --mail-type=ALL
 #SBATCH --gres=gpu:v100l:1 # Request GPU "generic resources"
+#SBATCH --mem=5000M
 #SBATCH --cpus-per-task=1  # Cores proportional to GPUs: 6 on Cedar, 16 on Graham.
 #SBATCH --time=0-00:45
 
