@@ -4,7 +4,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --gres=gpu:v100l:1 # Request GPU "generic resources"
 #SBATCH --cpus-per-task=1  # Cores proportional to GPUs: 6 on Cedar, 16 on Graham.
-#SBATCH --mem=12000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham.
+#SBATCH --mem=8000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham. prev 12
 #SBATCH --time=0-00:45
 
 cp requirements.txt usage-thread.csv $SLURM_TMPDIR/
@@ -16,7 +16,7 @@ module load maven
 virtualenv --no-download $SLURM_TMPDIR/env
 source $SLURM_TMPDIR/env/bin/activate
 pip install --upgrade pip --no-index
-pip install -r requirements.txt
+pip install -q -r requirements.txt
 
 java -Xms256m -Xmx4g -version
 unset JAVA_TOOL_OPTIONS
@@ -27,7 +27,7 @@ unzip -q /home/matt3c/projects/def-pesantg/matt3c/scriptshell/CMT-thread.zip -d 
 unzip -q /home/matt3c/projects/def-pesantg/matt3c/scriptshell/results.zip -d $SLURM_TMPDIR/
 unzip -q /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
 
-rm -r /idx002/sampling_results/
+rm -r results/idx002/sampling_results/
 
 cd results/idx002/
 ls 
