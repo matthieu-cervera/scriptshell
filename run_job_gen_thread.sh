@@ -4,7 +4,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --gres=gpu:v100l:1 # Request GPU "generic resources"
 #SBATCH --cpus-per-task=1  # Cores proportional to GPUs: 6 on Cedar, 16 on Graham.
-#SBATCH --mem=8000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham. prev 12
+#SBATCH --mem=6000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham. prev 12
 #SBATCH --time=0-00:45
 
 cp requirements.txt usage-thread.csv $SLURM_TMPDIR/
@@ -29,14 +29,10 @@ unzip -q /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
 
 rm -r results/idx002/sampling_results/
 
-cd results/idx002/
-ls 
 cd $SLURM_TMPDIR/
 
 python $SLURM_TMPDIR/run_w_threads.py --idx 2 --gpu_index 0 --ngpu 1 --optim_name adam --restore_epoch -100 --seed 42 --load_rhythm --sample
 
-cd results/idx002/sampling_results/
-ls 
 
 cd $SLURM_TMPDIR/
 
