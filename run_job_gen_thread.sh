@@ -23,7 +23,7 @@ unset JAVA_TOOL_OPTIONS
 
 cd $SLURM_TMPDIR/
 
-unzip -q /home/matt3c/projects/def-pesantg/matt3c/scriptshell/CMT-thread.zip -d $SLURM_TMPDIR/
+unzip -q /home/matt3c/projects/def-pesantg/matt3c/scriptshell/CMT-without-gt.zip -d $SLURM_TMPDIR/
 unzip -q /home/matt3c/projects/def-pesantg/matt3c/scriptshell/results.zip -d $SLURM_TMPDIR/
 unzip -q /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
 
