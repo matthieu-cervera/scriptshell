@@ -24,7 +24,11 @@ python $SLURM_TMPDIR/run_w_threads.py --idx 2 --gpu_index 0 --ngpu 1 --optim_nam
 zip -q -r resultsconstrained.zip results/idx002/
 
 
+
 cp resultsconstrained.zip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
-cp usage-train-constrained.csv /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
+#cp usage-train-constrained.csv /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
+cp results/idx002/sampling_results/epoch_100/epoch100_sample1997.mid /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
+cp results/idx002/sampling_results/epoch_100/epoch100_sample1998.mid /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
+
 
 exit
