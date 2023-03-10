@@ -2,6 +2,7 @@
 #SBATCH --account=def-pesantg
 #SBATCH --mail-user=matthieu.cervera@hotmail.com
 #SBATCH --mail-type=ALL
+#SBATCH --output=gen-%J.out
 #SBATCH --gres=gpu:v100l:1 # Request GPU "generic resources"
 #SBATCH --cpus-per-task=1  # Cores proportional to GPUs: 6 on Cedar, 16 on Graham.
 #SBATCH --mem=6000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham. prev 12
@@ -28,6 +29,9 @@ unzip -q /home/matt3c/projects/def-pesantg/matt3c/scriptshell/resultscheap.zip -
 unzip -q /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
 
 rm -r results/idx002/sampling_results/
+
+cd minicpbp/
+tar zxvf apache-maven-3.x.y.tar.gz
 
 cd $SLURM_TMPDIR/
 
