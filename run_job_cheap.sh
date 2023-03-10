@@ -2,8 +2,9 @@
 #SBATCH --account=def-pesantg
 #SBATCH --mail-user=matthieu.cervera@hotmail.com
 #SBATCH --mail-type=ALL
+#SBATCH --output=training-%J.out
 #SBATCH --gres=gpu:v100l:1 # Request GPU "generic resources"
-#SBATCH --mem=12000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham.
+#SBATCH --mem=9000M       # Memory proportional to GPUs: 32000 Cedar, 64000 Graham.
 #SBATCH --time=0-10:00
 
 cp requirements.txt usage-train-thread.csv $SLURM_TMPDIR/
@@ -26,5 +27,7 @@ zip -q -r resultscheap.zip results/idx002/
 
 cp resultscheap.zip /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
 cp usage-train-thread.csv /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
+cp results/idx002/sampling_results/epoch_-100/epoch100_sample1997.mid /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
+cp results/idx002/sampling_results/epoch_-100/epoch100_sample1998.mid /home/matt3c/projects/def-pesantg/matt3c/scriptshell/
 
 exit
