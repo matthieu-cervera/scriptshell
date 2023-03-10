@@ -31,7 +31,8 @@ unzip -q /home/matt3c/scratch/pkl_files_EWLD.zip -d $SLURM_TMPDIR/
 rm -r results/idx002/sampling_results/
 
 cd minicpbp/
-tar zxvf apache-maven-3.x.y.tar.gz
+#tar zxvf apache-maven-3.x.y.tar.gz
+mvn compile
 
 cd $SLURM_TMPDIR/
 
